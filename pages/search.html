@@ -1,0 +1,170 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../scss/style.css"/>
+        <link rel="shortcut icon" href="../assets/icon.png">
+        <title>Búsqueda</title>
+        <meta name="keywords" content="Battló, battlo, minibags, carteras">
+        <meta name="description" content="Minibags hechas en Argentina - Envíos a todo el mundo 🌎">
+    </head>
+    <body class="container-fluid">
+        <header class="row header">
+            <div class="col-lg-12 col-xs-12 jumbotron jumbotron-fluid">
+                <span class="text-white" data-aos="zoom-in">Envíos a todo el MUNDO o retirá gratis por nuestro Showroom</span>
+            </div>
+            <nav class="col-lg-1 col-xs-1">
+                <button type="button" class="btn border-0" data-toggle="modal" data-target="#navModal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
+                </button>
+            </nav>
+            <div class="d-none"><!--class="col-lg-3 d-none d-md-block"-->
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2 bg-transparent border-dark" type="search" placeholder="Buscar" aria-label="Search" id="search" required>
+                    <a class="btn border-0" type="submit" href="./pages/search.html" role="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                    </a>
+                </form>
+            </div>
+            <div class="col-lg-9 col-xs-10 text-center">
+                <a class="navbar-brand" href="./index.html">
+                    <h2 class="text-uppercase">Battló</h2>
+                </a>
+            </div>
+            <div class="d-none"><!--class="col-lg-1 d-none d-md-block"-->
+                <select class="form-select bg-transparent border-dark" aria-label="Default select example">
+                    <option value="ARG"selected>ARG</option>
+                    <option value="AU">AU</option>
+                    <option value="BR">BR</option>
+                    <option value="CL">CL</option>
+                    <option value="ES">ES</option>
+                    <option value="GB">GB</option>
+                    <option value="MX">MX</option>
+                    <option value="PY">PY</option>
+                    <option value="US">US</option>
+                    <option value="UY">UY</option>
+                </select>
+                <!--<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                        <path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-euro" viewBox="0 0 16 16">
+                        <path d="M4 9.42h1.063C5.4 12.323 7.317 14 10.34 14c.622 0 1.167-.068 1.659-.185v-1.3c-.484.119-1.045.17-1.659.17-2.1 0-3.455-1.198-3.775-3.264h4.017v-.928H6.497v-.936c0-.11 0-.219.008-.329h4.078v-.927H6.618c.388-1.898 1.719-2.985 3.723-2.985.614 0 1.175.05 1.659.177V2.194A6.617 6.617 0 0 0 10.341 2c-2.928 0-4.82 1.569-5.244 4.3H4v.928h1.01v1.265H4v.928z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-pound" viewBox="0 0 16 16">
+                        <path d="M4 8.585h1.969c.115.465.186.939.186 1.43 0 1.385-.736 2.496-2.075 2.771V14H12v-1.24H6.492v-.129c.825-.525 1.135-1.446 1.135-2.694 0-.465-.07-.913-.168-1.352h3.29v-.972H7.22c-.186-.723-.372-1.455-.372-2.247 0-1.274 1.047-2.066 2.58-2.066a5.32 5.32 0 0 1 2.103.465V2.456A5.629 5.629 0 0 0 9.348 2C6.865 2 5.322 3.291 5.322 5.366c0 .775.195 1.515.399 2.247H4v.972z"/>
+                    </svg>-->
+            </div>
+            <div class="col-lg-1 col-xs-1">
+                <button type="button" class="btn" data-toggle="modal" data-target="#shopModal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                        <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                    </svg>
+                </button>
+            </div>
+        </header>
+        <div class="modal fade" id="navModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog--nav">
+                <div class="modal-content modal-content--nav">
+                    <div class="modal-header">
+                        <select class="form-select changeDesktop" aria-label="Default select example">
+                            <option value="ARG" selected>ARG</option>
+                            <option value="AU">AU</option>
+                            <option value="BR">BR</option>
+                            <option value="CL">CL</option>
+                            <option value="ES">ES</option>
+                            <option value="GB">GB</option>
+                            <option value="MX">MX</option>
+                            <option value="PY">PY</option>
+                            <option value="US">US</option>
+                            <option value="UY">UY</option>
+                        </select>
+                        <form class="form-inline changeDesktop">
+                            <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" required>
+                            <a class="btn border-0" type="submit" href="./pages/search.html" role="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                </svg>
+                            </a>
+                        </form>
+                        <button type="button" class="btn btn-close" data-dismiss="modal" aria-label="Close">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="nav">
+                            <li class="active"><a href="../index.html">Inicio</a></li>
+                            <li><a href="./us.html">Nosotrxs</a></li>
+                            <li><a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">Productos</a>
+                                <ul>
+                                    <li><a href="./products.html">Ver todos los productos</a></li>
+                                    <li><a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">Carteras</a>
+                                        <ul>
+                                            <li><a href="./bags.html">Ver todas las carteras</a></li>
+                                            <li class="text-uppercase"><a href="./the-baguette-bag.html">The baguette bag</a></li>
+                                            <li class="text-uppercase"><a href="./hannah.html">Hannah</a></li>
+                                            <li class="text-uppercase"><a href="./kendall.html">Kendall</a></li>
+                                            <li class="text-uppercase"><a href="./britney.html">Britney</a></li>
+                                            <li class="text-uppercase"><a href="./hailey.html">Hailey</a></li>
+                                            <li class="text-uppercase"><a href="./gigi.html">Gigi</a></li>
+                                            <li class="text-uppercase"><a href="./kim.html">Kim</a></li>
+                                            <li class="text-uppercase"><a href="./kylie.html">Kylie</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="./straps.html">Correas</a></li>
+                                    <li><a href="./card-holders.html">Tarjeteros</a></li>
+                                    <li><a href="./belts.html">Cintos</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./contact.html">Contacto</a></li>
+                            <li><a href="./policies.html">Políticas</a></li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        </svg>
+                        <span><a href="./account/login.html">Iniciar sesión</a> | <a href="./account/register.html">Crear cuenta</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="shopModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog--shop">
+                <div class="modal-content modal-content--shop">
+                    <div class="modal-header align">
+                        <button type="button" class="btn btn-close" data-dismiss="modal" aria-label="Close">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
+                            </svg>
+                        </button>
+                        <h3 class="modal-title">Carrito de compras</h3>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="crossorigin="anonymous"></script>
+        <script src="../js/search.js"></script>
+    </body>
+</html>
