@@ -1,0 +1,332 @@
+$typography1: 'Playfair Display', serif;
+$typography2: 'Rubik', sans-serif;
+$black: black;
+$pink: #ff00ff;
+$white: white;
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100%;
+}
+.container-fluid {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    width: 100%;
+    height: 5.5rem;
+    margin: 0;
+    padding: 0;
+    background-color: $white;
+}
+.header--index {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    width: 100%;
+    height: 5.5rem;
+    margin: 0;
+    padding: 0;
+}
+.jumbotron {
+    background-color: rgba(0, 0, 0, .3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 1.5rem;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+@for $i from 1 through 3 {
+    h#{$i}{
+        font-size: 44px - (8*$i);
+    }
+}
+@mixin styleText ($color, $font-family, $text-align) {
+    color: $color;
+    font-family: $font-family;
+    text-align: $text-align;
+}
+h1, h2, h3 {
+    @include styleText ($black, $typography1, center);
+    font-weight: 700;
+}
+h4 {
+    @include styleText ($black, $typography1, center);
+    margin: 0 0 0.5rem 0;
+    font-size: 20px;
+}
+p {
+    @include styleText ($black, $typography2, center);
+    margin: 0;
+    font-size: 16px;
+}
+span {
+    @include styleText ($black, $typography2, center);
+    margin: 0;
+    font-size: 14px;
+}
+li {
+    @include styleText ($black, $typography2, left);
+    margin: 0;
+}
+button {
+    font-family: $typography2;
+    letter-spacing: 2px;
+}
+form {font-family: $typography2;}
+.modal-dialog--nav {
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.modal-content--nav, .modal-content--shop {
+    height: auto;
+    min-height: 100%;
+}
+.modal-dialog--shop {
+    top: 0;
+    left: 64.5%;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.modal-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.changeDesktop {visibility: hidden;}
+.align {
+    justify-content: flex-start;
+}
+ul {list-style: none;}
+.nav {
+    display: block;
+}
+.nav li a {
+    text-decoration: none;
+    display: block;
+    margin: 1rem 0 1rem 0;
+}
+.nav li a:hover {
+    color: $pink;
+}
+.nav li ul {
+    display: none;
+    position: relative;
+}
+.nav li:hover > ul {
+    display: block;
+}
+.modal-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+a {
+    text-decoration: none;
+    color: $black;
+}
+a:hover {
+    text-decoration: none;
+    color: $pink;
+}
+.border-dark::placeholder {color: $black;}
+.form-inline {width: auto;}
+.bi-search {margin: 0;}
+.fixed-header {background-color: $white;}
+main {
+    margin-bottom: 4rem;
+    padding: 0 1rem;
+}
+section {margin-top: 2rem;}
+footer {margin-top: 4rem;}
+.navbar {margin: 1.5rem 0 1.5rem 0;}
+footer div div {margin-bottom: 1rem;}
+.footer--pay {margin: 10px 10px 10px 10px;}
+.parallax--index {
+    background-image: url("../assets/battlo.jpg");
+    width: 100%;
+    height: 38rem;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.img--index {
+    background-image: url("../assets/the-baguette-bag_orange_crocco2.jpg");
+    background-repeat: no-repeat;
+    height: 38rem;
+    width: auto;
+}
+.h1--index {
+    position: absolute;
+    top: 0%;
+    left: 70%;
+}
+.carouselStyle {
+    position: absolute;
+    top: 10%;
+}
+/*.carousel-indicators {
+    top: 105%;
+}
+.carousel-indicators li {
+    background: $black;
+    border-radius: 50%;
+    width: 1rem;
+    height: 0.1rem;
+}
+.carousel-indicators .active {background: $pink;}*/
+.card-container {
+    position: relative;
+    display: inline-block;
+}
+.jumbotron-absolute {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 45%;
+}
+.rounded-circle {
+    position: absolute;
+    top: 85%;
+    left: 45%;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+}
+.bag-style {
+    color: $white;
+    padding: 0;
+    margin-bottom: 0.2rem;
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.modal-dialog--add {
+    position: absolute;
+    top: 55%;
+    left: 1.4%;
+    width: 22%;
+    height: 10%;
+    margin: 0;
+    padding: 0;
+}
+.group-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+div svg {margin: 0 0.5rem 0.5rem 0.5rem;}
+.group-margin {margin: 0 5rem;}
+.img--us {
+    height: 30rem;
+    width: auto;
+}
+.background--contact {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), 
+        url("../assets/britney_bottlegreen_matte2.jpg");
+    background-position: center;
+    background-repeat: repeat;
+}
+.placeholder-white::placeholder {color: $white;}
+@media only screen and (max-width: 1200px){
+    @for $i from 1 through 3 {
+        h#{$i}{
+            font-size: 44px - (6*$i);
+        }
+    }
+    p {font-size: 24px;}
+    span {font-size: 16px;}
+    .modal-dialog--nav {width: 60%;}
+    .changeDesktop {visibility: hidden;}
+    .modal-dialog--shop {left: 40%;} /*en algunos dispositivos no queda alineado a la derecha*/
+}
+@media only screen and (max-width: 768px) {
+    @for $i from 1 through 3 {
+        h#{$i}{
+            font-size: 36px - (5*$i);
+        }
+    }
+    p {font-size: 18px;}
+    span {font-size: 14px;}
+    button {font-size: 14px;}
+    form {font-size: 14px;}
+    .modal-header form {width: 6rem;}
+    .modal-dialog--nav {width: 70%;}
+    .changeDesktop {visibility: visible;}
+    .modal-dialog--shop {left: 20%;} /*en algunos dispositivos no queda alineado a la derecha*/
+    .parallax--index {display: block;}
+}
+@media only screen and (max-width: 360px) {
+    @for $i from 1 through 3 {
+        h#{$i}{
+            font-size: 30px - (4*$i);
+        }
+    }
+    h4 {font-size: 18px;}
+    p {font-size: 14px;}
+    span {font-size: 12px;}
+    button {font-size: 14px;}
+    form {font-size: 14px;}
+    .modal-dialog--nav {width: 80%;}
+    .changeDesktop {visibility: visible;}
+    .modal-header form {width: 6rem;}
+    .modal-dialog--shop {left: 0;}
+    .img--index {
+        width: 10rem;
+        height: auto;
+    }
+    .parallax--index {
+        background-attachment: none;
+        background-position: none;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 20rem;
+    }
+    .img--index {
+        background-image: url("../assets/the-baguette-bag_orange_crocco2.jpg");
+        background-repeat: no-repeat;
+        height: 20rem;
+        width: 100%;
+    }
+    .h1--index {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: 1rem 0;
+    }
+    /*.carouselStyle {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+    }*/
+    .group-margin {margin: 0 1rem;}
+    /*iconos, imagenes footer, nav*/
+}
