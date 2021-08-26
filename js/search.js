@@ -7,6 +7,7 @@ main.setAttribute(`id`, `cardsSearch`)
 body.appendChild(main)
 let title = document.createElement(`h1`)
 title.setAttribute(`class`, `col-lg-12 col-xs-12 mb-4`)
+title.textContent()
 main.prepend(title)
 // P R O D U C T O S //
 const fromJson = localStorage.getItem(`products`)
