@@ -16,9 +16,13 @@ h3 { font-size: 20px; }
 
 h1, h2, h3 { color: black; font-family: "Playfair Display", serif; text-align: center; font-weight: 700; }
 
+.spanH3 { color: black; font-family: "Playfair Display", serif; text-align: center; font-weight: 700; font-size: 20px; }
+
 h4 { color: black; font-family: "Playfair Display", serif; text-align: center; margin: 0 0 0.5rem 0; font-size: 20px; }
 
 p { color: black; font-family: "Rubik", sans-serif; text-align: center; margin: 0; font-size: 16px; }
+
+.spanP { color: black; font-family: "Rubik", sans-serif; text-align: center; margin: 0; font-size: 16px; }
 
 span { color: black; font-family: "Rubik", sans-serif; text-align: center; margin: 0; font-size: 14px; }
 
@@ -90,9 +94,11 @@ footer div div { margin-bottom: 1rem; }
 
 .h1--index { position: absolute; top: 0%; left: 70%; }
 
-.carouselStyle { position: absolute; top: 10%; }
-
-/*.carousel-indicators {
+/*.carouselStyle {
+    position: absolute;
+    top: 10%;
+}
+.carousel-indicators {
     top: 105%;
 }
 .carousel-indicators li {
@@ -157,8 +163,10 @@ div svg { margin: 0 0.5rem 0.5rem 0.5rem; }
 @media only screen and (max-width: 360px) { h1 { font-size: 26px; }
   h2 { font-size: 22px; }
   h3 { font-size: 18px; }
+  .spanH3 { font-size: 18px; }
   h4 { font-size: 18px; }
   p { font-size: 14px; }
+  .spanP { font-size: 14px; }
   span { font-size: 12px; }
   button { font-size: 14px; }
   form { font-size: 14px; }

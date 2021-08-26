@@ -68,12 +68,22 @@ h1, h2, h3 {
     @include styleText ($black, $typography1, center);
     font-weight: 700;
 }
+.spanH3 {
+    @include styleText ($black, $typography1, center);
+    font-weight: 700;
+    font-size: 20px;
+}
 h4 {
     @include styleText ($black, $typography1, center);
     margin: 0 0 0.5rem 0;
     font-size: 20px;
 }
 p {
+    @include styleText ($black, $typography2, center);
+    margin: 0;
+    font-size: 16px;
+}
+.spanP {
     @include styleText ($black, $typography2, center);
     margin: 0;
     font-size: 16px;
@@ -290,8 +300,10 @@ div svg {margin: 0 0.5rem 0.5rem 0.5rem;}
             font-size: 30px - (4*$i);
         }
     }
+    .spanH3 {font-size: 18px;}
     h4 {font-size: 18px;}
     p {font-size: 14px;}
+    .spanP {font-size: 14px;}
     span {font-size: 12px;}
     button {font-size: 14px;}
     form {font-size: 14px;}

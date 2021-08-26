@@ -152,7 +152,22 @@
                         <h3 class="modal-title">Carrito de compras</h3>
                     </div>
                     <div class="modal-body modal-body--shop">
-                        <ul class="shoppingCart list-group"></ul>
+                        <p id="text"></p>
+                        <ul class="list-group mt-2" id="shoppingCart"></ul>
+                        <div style="display: none;" id="noneBlock">
+                            <div class="text-right mt-2">
+                                <button class="btn btn-dark" id="buttonEmpty">Vaciar</button>
+                            </div>
+                            <hr>
+                            <h3 class="text-right">Total: $<span class="spanH3" id="total"></span></h3>
+                            <p class="text-right">0 a 6 cuotas sin interés de $<span class="spanP" id="installmentValue"></span></p>
+                            <div class="text-center mt-2">
+                                <button class="btn btn-dark text-uppercase" id="buttonBuy">Iniciar compra</button>
+                            </div>
+                            <div class="text-center mt-2">
+                                <span><a href="./products.html">Ver más productos</a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
